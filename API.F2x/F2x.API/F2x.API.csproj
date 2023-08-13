@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\InsurancePolicyPlanController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\F2x.Common\F2x.Common.csproj" />
+    <ProjectReference Include="..\F2x.EntityDomain\F2x.EntityDomain.csproj" />
+    <ProjectReference Include="..\F2x.Persistence\F2x.Persistence.csproj" />
+    <ProjectReference Include="..\F2x.RepositoryInterface\F2x.RepositoryInterface.csproj" />
+    <ProjectReference Include="..\F2x.UseCases\F2x.UseCases.csproj" />
+  </ItemGroup>
+
+</Project>
